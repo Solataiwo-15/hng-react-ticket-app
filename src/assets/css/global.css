@@ -1,0 +1,168 @@
+/* ============================================= */
+/* --- 0. FONT IMPORT & GLOBAL RESETS --- */
+/* ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Define our NEW color palette */
+    --primary-color: #6366F1; /* A modern, vibrant indigo */
+    --primary-color-dark: #4F46E5;
+    --background-color: #F8F9FA;
+    --surface-color: #FFFFFF; /* Replaces card-bg-color */
+    --text-color: #1F2937;
+    --text-color-muted: #6B7280;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+
+    /* Status colors */
+    --status-open: #10B981;       /* Green */
+    --status-in-progress: #F59E0B; /* Amber */
+    --status-closed: #6B7280;      /* Gray */
+}
+
+/* Basic reset and font application */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ============================================= */
+/* --- 1. SHARED LAYOUT & CONTAINER --- */
+/* ============================================= */
+
+/* The main container rule required by the task */
+.container {
+    max-width: 1440px;
+    margin: 0 auto; /* Horizontally centers the content */
+    padding: 0 24px; /* Adds space on the sides for smaller screens */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ============================================= */
+/* --- 2. REUSABLE COMPONENTS --- */
+/* ============================================= */
+
+/* Card style for tickets, dashboard stats, etc. */
+.card {
+    background-color: var(--surface-color); /* UPDATE THIS LINE */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+}
+
+/* ... after .btn-primary:hover ... */
+
+.btn-light {
+    background-color: #FFFFFF;
+    color: var(--primary-color-dark);
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.btn-outline-light:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-color-dark);
+}
+
+.btn-text {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-text:hover {
+    background-color: rgba(99, 102, 241, 0.1); /* A very light indigo background on hover */
+}
+
+/* Form input styles */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+}
+
+
+/* ============================================= */
+/* --- 3. TICKET STATUS TAGS --- */
+/* ============================================= */
+.status-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 9999px; /* Pill shape */
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-open {
+    background-color: var(--status-open);
+    color: white;
+}
+
+.status-in-progress {
+    background-color: var(--status-in-progress);
+    color: #333; /* Dark text for better contrast on yellow */
+}
+
+.status-closed {
+    background-color: var(--status-closed);
+    color: white;
+}
+
+
+/* ============================================= */
+/* --- 4. FOOTER --- */
+/* ============================================= */
+.footer {
+    width: 100%;
+    padding: 5px 0;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+.auth-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: var(--text-color);
+}
+
+.error-message {
+    color: #EF4444; /* A modern red for errors */
+    font-size: 14px;
+    margin-top: 1px;
+    min-height: 1em; /* Prevents layout shifts */
+}
+
+.btn.full-width {
+    width: 100%;
+}

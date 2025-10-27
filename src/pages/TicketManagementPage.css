@@ -1,0 +1,54 @@
+.ticket-management-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ticket-main {
+    flex-grow: 1;
+}
+
+.ticket-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    margin-top: 15px;
+}
+
+.ticket-page-header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.ticket-page-header .btn i {
+    margin-right: 8px;
+}
+
+.ticket-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+/* ============================================= */
+/* --- TICKET PAGE RESPONSIVENESS --- */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    .ticket-page-header {
+        /* Stack the title and button on mobile */
+        flex-direction: column;
+        align-items: flex-start; /* Align to the left */
+        gap: 16px;
+    }
+
+    .ticket-page-header h1 {
+        font-size: 30px;
+    }
+
+    .ticket-list {
+        /* Ensure a single column on small screens */
+        grid-template-columns: 1fr;
+    }
+}
