@@ -1,16 +1,73 @@
-# React + Vite
+# HNG Stage 2: Multi-Framework Ticket Web App (React Version)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the **React implementation** for the HNG Stage 2 Frontend task. It is a complete, full-featured ticket management web application built from the ground up using React, Vite, and React Router.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✨ Live URL
 
-## React Compiler
+**The deployed application can be viewed here:**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**[https://hng-react-ticket-app-gilt.vercel.app/](https://hng-react-ticket-app-gilt.vercel.app/)**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Core Features Implemented
+
+- **Modern UI/UX:** A clean, attractive, and "cute" user interface with a consistent design language, responsive layouts, and subtle animations.
+- **Landing Page:** A welcoming hero section with a custom SVG wave background, decorative elements, and clear calls-to-action.
+- **Authentication:** Fully functional Login and Signup pages with client-side validation.
+- **Simulated User Sessions:** User authentication is simulated using `localStorage`, with sessions that expire after one hour.
+- **Protected Routes:** The Dashboard and Ticket Management pages are secure and only accessible to authenticated users. Unauthorized access results in a redirect to the login page.
+- **Dashboard:** A "smart" dashboard that displays key statistics (Total, Open, Resolved tickets) in visually appealing cards.
+- **Full CRUD Functionality:** A complete Ticket Management system allowing users to:
+  - **C**reate new tickets via a modal form.
+  - **R**ead all existing tickets in a responsive grid.
+  - **U**pdate ticket details (title, description, status) via an edit modal.
+  - **D**elete tickets with a confirmation step.
+- **Responsive Design:** The entire application is fully responsive, featuring a slide-in sidebar menu for a polished mobile experience.
+
+---
+
+### 🛠️ Tech Stack & Libraries
+
+- **Framework:** React
+- **Build Tool:** Vite
+- **Routing:** React Router DOM (`react-router-dom`)
+- **Styling:** Plain CSS with variables for theming.
+- **Icons:** Font Awesome
+
+---
+
+### 🚀 Setup and Execution Steps
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/Solataiwo-15/hng-react-ticket-app.git
+    ```
+2.  **Navigate into the directory:**
+    ```sh
+    cd hng-react-ticket-app
+    ```
+3.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+4.  **Start the development server:**
+    ```sh
+    npm run dev
+    ```
+5.  Open your browser and navigate to the local URL provided (e.g., `http://localhost:5173`).
+
+---
+
+### 👤 Example Test User Credentials
+
+Since this is a simulated authentication, you can use any of the following to test:
+
+- **Login:** Enter any non-empty email and password.
+- **Signup:** Fill out all fields with valid information (email format, password length) to create a new "session."
+
+---
