@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import './AuthLayout.css'; // We will create this next
+import './AuthLayout.css';
 
 const AuthLayout = ({ title, children, footerText, footerLink, footerLinkText }) => {
   return (

@@ -1,6 +1,16 @@
-# HNG Stage 2: Multi-Framework Ticket Web App (React Version)
+### 🗂️ About This Project Series
 
-This repository contains the **React implementation** for the HNG Stage 2 Frontend task. It is a complete, full-featured ticket management web application built from the ground up using React, Vite, and React Router.
+This application was built as part of the HNG Internship Stage 2 task, which required implementing the same application across three different frontend technologies.
+
+**This repository contains the React version.**
+
+You can view the other implementations here:
+
+- **Live Demo (Vue.js Version):** `https://hng-vue-ticket-app-phi.vercel.app/`
+- **GitHub Repo (Vue.js Version):** `https://github.com/Solataiwo-15/hng-vue-ticket-app`
+
+- **Live Demo (Twig/JS Version):** `https://hng-twig-ticket-app.vercel.app/`
+- **GitHub Repo (Twig/JS Version):** `https://github.com/Solataiwo-15/hng-twig-ticket-app`
 
 ---
 

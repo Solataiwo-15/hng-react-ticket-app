@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Import useEffect
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
@@ -6,10 +6,9 @@ const DashboardNavbar = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Add the same effect here
   useEffect(() => {
     const mainContent = document.querySelector('main');
-    if (mainContent) { // Check if main content exists
+    if (mainContent) { 
       if (isMenuOpen) {
         mainContent.classList.add('blur-background');
       } else {
@@ -18,7 +17,6 @@ const DashboardNavbar = () => {
     }
   }, [isMenuOpen]);
 
-  // ... rest of the component is the same ...
   const sessionData = JSON.parse(localStorage.getItem('ticketapp_session'));
   const userName = sessionData?.user?.name || 'User';
 

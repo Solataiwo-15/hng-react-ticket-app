@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import '../pages/AuthPages.css'; // We can reuse the form styles
+import { useState } from 'react';
+import '../pages/AuthPages.css';
 
 const CreateTicketForm = ({ onSave, onCancel }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [status, setStatus] = useState('open'); // Default status
+  const [status, setStatus] = useState('open'); 
   const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Validation
     if (title.trim() === '') {
       setError('Title is mandatory.');
       return;
@@ -20,17 +19,16 @@ const CreateTicketForm = ({ onSave, onCancel }) => {
     }
     setError('');
 
-    // Create a new ticket object
     const newTicket = {
-      id: `TICKET-${Math.floor(Math.random() * 1000)}`, // Simple unique ID
+      id: `TICKET-${Math.floor(Math.random() * 1000)}`, 
       title,
       description,
       status,
-      priority: 'medium', // Default priority for new tickets
+      priority: 'medium', 
       createdAt: new Date(),
     };
 
-    onSave(newTicket); // Pass the new ticket up to the parent
+    onSave(newTicket); 
   };
 
   return (

@@ -14,10 +14,10 @@
 }
 
 .error-message {
-    color: #EF4444; /* A modern red for errors */
+    color: #EF4444;
     font-size: 14px;
     margin-top: 1px;
-    min-height: 1em; /* Prevents layout shifts */
+    min-height: 1em;
 }
 
 .btn.full-width {

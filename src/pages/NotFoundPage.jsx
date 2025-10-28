@@ -1,8 +1,7 @@
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import './NotFoundPage.css'; // We will create this file
+import './NotFoundPage.css';
 
 const NotFoundPage = () => {
   return (

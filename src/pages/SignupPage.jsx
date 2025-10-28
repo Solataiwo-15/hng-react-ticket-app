@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthLayout from '../components/AuthLayout';
 import './AuthPages.css';
@@ -6,12 +6,9 @@ import './AuthPages.css';
 const SignupPage = () => {
   const navigate = useNavigate();
 
-  // State for form inputs
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
-  // State for error messages
   const [fullNameError, setFullNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -19,8 +16,8 @@ const SignupPage = () => {
   const handleSignup = (event) => {
     event.preventDefault();
 
-    // --- Start Validation ---
     let isValid = true;
+
     setFullNameError('');
     setEmailError('');
     setPasswordError('');
@@ -47,9 +44,7 @@ const SignupPage = () => {
     if (!isValid) {
       return;
     }
-    // --- End Validation ---
 
-    // --- Simulate Successful Signup & Login ---
     const session = {
       token: 'dummy-jwt-token-for-hng-task-signup',
       user: {
@@ -61,7 +56,6 @@ const SignupPage = () => {
 
     localStorage.setItem('ticketapp_session', JSON.stringify(session));
     
-    // --- Redirect to Dashboard ---
     navigate('/dashboard');
   };
 

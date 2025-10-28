@@ -1,6 +1,6 @@
-// src/utils/mock-data.js
 
 export const initialTickets = [
+
   {
     id: 'TICKET-001',
     title: 'Website is not loading on mobile',
@@ -33,4 +33,5 @@ export const initialTickets = [
     priority: 'medium',
     createdAt: new Date(2025, 9, 26, 11, 20, 0),
   },
+  
 ];

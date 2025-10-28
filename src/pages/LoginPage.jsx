@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthLayout from '../components/AuthLayout';
 import './AuthPages.css';
@@ -6,11 +6,9 @@ import './AuthPages.css';
 const LoginPage = () => {
     const navigate = useNavigate();
 
-    // State for form inputs
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    // State for error messages (CORRECTED: using useState)
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
@@ -18,11 +16,9 @@ const LoginPage = () => {
         event.preventDefault();
 
         let isValid = true;
-        // Reset errors on each submission attempt
         setEmailError('');
         setPasswordError('');
 
-        // --- Validation ---
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email.trim() === '') {
             setEmailError('Email is required.');
@@ -32,17 +28,14 @@ const LoginPage = () => {
             isValid = false;
         }
 
-        if (password.trim() === '') { // CORRECTED: was checking for a space ' '
+        if (password.trim() === '') { 
             setPasswordError('Password is required.');
             isValid = false;
         }
 
-        // If validation fails, stop the function here
         if (!isValid) {
-            return; // CORRECTED: was returning on success, now returns on failure
+            return;
         }
-        
-        // --- If validation succeeds, proceed ---
 
         const session = {
             token: 'dummy-jwt-token-for-hng-task',
@@ -85,7 +78,7 @@ const LoginPage = () => {
             id="password" 
             className="form-input" 
             placeholder="••••••••" 
-            value={password} // ADDED: value prop for password
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
           <div className="error-message">{passwordError}</div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../pages/AuthPages.css';
 
 const EditTicketForm = ({ ticket, onSave, onCancel }) => {
@@ -7,7 +7,6 @@ const EditTicketForm = ({ ticket, onSave, onCancel }) => {
   const [status, setStatus] = useState('open');
   const [error, setError] = useState('');
   
-  // This effect pre-fills the form with the ticket's current data
   useEffect(() => {
     if (ticket) {
       setTitle(ticket.title);
@@ -31,7 +30,6 @@ const EditTicketForm = ({ ticket, onSave, onCancel }) => {
   return (
     <form onSubmit={handleSubmit} className="auth-form" noValidate>
       <h2 className="auth-title">Edit Ticket #{ticket.id}</h2>
-      {/* ... form fields are identical to CreateTicketForm ... */}
       <div className="form-group">
         <label htmlFor="edit-title">Title</label>
         <input id="edit-title" type="text" className="form-input" value={title} onChange={(e) => setTitle(e.target.value)} />

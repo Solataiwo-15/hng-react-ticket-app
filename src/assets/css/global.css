@@ -1,25 +1,19 @@
-/* ============================================= */
-/* --- 0. FONT IMPORT & GLOBAL RESETS --- */
-/* ============================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Define our NEW color palette */
-    --primary-color: #6366F1; /* A modern, vibrant indigo */
+    --primary-color: #6366F1; 
     --primary-color-dark: #4F46E5;
     --background-color: #F8F9FA;
-    --surface-color: #FFFFFF; /* Replaces card-bg-color */
+    --surface-color: #FFFFFF;
     --text-color: #1F2937;
     --text-color-muted: #6B7280;
     --shadow-color: rgba(0, 0, 0, 0.05);
-
-    /* Status colors */
-    --status-open: #10B981;       /* Green */
-    --status-in-progress: #F59E0B; /* Amber */
-    --status-closed: #6B7280;      /* Gray */
+    --status-open: #10B981;       
+    --status-in-progress: #F59E0B; 
+    --status-closed: #6B7280;     
 }
 
-/* Basic reset and font application */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -29,27 +23,16 @@ body {
     line-height: 1.6;
 }
 
-/* ============================================= */
-/* --- 1. SHARED LAYOUT & CONTAINER --- */
-/* ============================================= */
-
-/* The main container rule required by the task */
 .container {
     max-width: 1440px;
-    margin: 0 auto; /* Horizontally centers the content */
-    padding: 0 24px; /* Adds space on the sides for smaller screens */
+    margin: 0 auto; 
+    padding: 0 24px; 
     width: 100%;
     box-sizing: border-box;
 }
 
-
-/* ============================================= */
-/* --- 2. REUSABLE COMPONENTS --- */
-/* ============================================= */
-
-/* Card style for tickets, dashboard stats, etc. */
 .card {
-    background-color: var(--surface-color); /* UPDATE THIS LINE */
+    background-color: var(--surface-color); 
     border-radius: 12px;
     box-shadow: 0 4px 20px var(--shadow-color);
     padding: 24px;
@@ -61,7 +44,6 @@ body {
     box-shadow: 0 8px 30px var(--shadow-color);
 }
 
-/* Button styles */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -87,8 +69,6 @@ body {
     background-color: #357ABD;
 }
 
-/* ... after .btn-primary:hover ... */
-
 .btn-light {
     background-color: #FFFFFF;
     color: var(--primary-color-dark);
@@ -111,10 +91,9 @@ body {
 }
 
 .btn-text:hover {
-    background-color: rgba(99, 102, 241, 0.1); /* A very light indigo background on hover */
+    background-color: rgba(99, 102, 241, 0.1); 
 }
 
-/* Form input styles */
 .form-input {
     width: 100%;
     padding: 12px;
@@ -126,14 +105,10 @@ body {
     margin-bottom: 2px;
 }
 
-
-/* ============================================= */
-/* --- 3. TICKET STATUS TAGS --- */
-/* ============================================= */
 .status-tag {
     display: inline-block;
     padding: 4px 12px;
-    border-radius: 9999px; /* Pill shape */
+    border-radius: 9999px;
     font-size: 12px;
     font-weight: 600;
     text-transform: capitalize;
@@ -146,7 +121,7 @@ body {
 
 .status-in-progress {
     background-color: var(--status-in-progress);
-    color: #333; /* Dark text for better contrast on yellow */
+    color: #333;
 }
 
 .status-closed {
@@ -154,10 +129,6 @@ body {
     color: white;
 }
 
-
-/* ============================================= */
-/* --- 4. FOOTER --- */
-/* ============================================= */
 .footer {
     width: 100%;
     padding: 5px 0;

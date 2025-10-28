@@ -1,9 +1,8 @@
-import React from 'react';
-import './TicketModal.css'; // We will create this next
+import './TicketModal.css'; 
 
 const TicketModal = ({ isOpen, onClose, children }) => {
   if (!isOpen) {
-    return null; // Don't render anything if the modal is closed
+    return null;
   }
 
   return (

@@ -1,10 +1,8 @@
-import React from 'react';
 import DashboardNavbar from '../components/DashboardNavbar';
 import Footer from '../components/Footer';
-import './DashboardPage.css'; // We will create this file next
+import './DashboardPage.css'; 
 
 const DashboardPage = () => {
-  // In a real app, this data would come from an API call
   const stats = {
     totalTickets: 25,
     openTickets: 12,
@@ -23,7 +21,6 @@ const DashboardPage = () => {
           </header>
 
           <div className="stats-grid">
-            {/* Total Tickets Card */}
             <div className="card stat-card total-tickets">
               <div className="stat-icon">
                 <i className="fas fa-ticket-alt"></i>
@@ -34,8 +31,6 @@ const DashboardPage = () => {
                 <p className="stat-context">All tickets created</p>
               </div>
             </div>
-
-            {/* Open Tickets Card */}
             <div className="card stat-card open-tickets">
               <div className="stat-icon">
                 <i className="fas fa-envelope-open-text"></i>
@@ -46,8 +41,6 @@ const DashboardPage = () => {
                 <p className="stat-context">Tickets awaiting response</p>
               </div>
             </div>
-
-            {/* Resolved Tickets Card */}
             <div className="card stat-card resolved-tickets">
               <div className="stat-icon">
                 <i className="fas fa-check-circle"></i>

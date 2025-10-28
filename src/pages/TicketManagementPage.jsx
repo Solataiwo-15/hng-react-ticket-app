@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DashboardNavbar from '../components/DashboardNavbar';
 import Footer from '../components/Footer';
 import TicketCard from '../components/TicketCard';
 import TicketModal from '../components/TicketModal';
 import CreateTicketForm from '../components/CreateTicketForm';
-import EditTicketForm from '../components/EditTicketForm'; // Import Edit form
+import EditTicketForm from '../components/EditTicketForm';
 import { initialTickets } from '../utils/mock-data';
 import './TicketManagementPage.css';
 
@@ -62,7 +62,7 @@ const TicketManagementPage = () => {
                 key={ticket.id} 
                 ticket={ticket}
                 onDelete={() => handleDeleteTicket(ticket.id)}
-                onEdit={() => handleOpenEditModal(ticket)} // Pass the onEdit function
+                onEdit={() => handleOpenEditModal(ticket)}
               />
             ))}
           </div>
@@ -74,10 +74,9 @@ const TicketManagementPage = () => {
       <TicketModal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)}>
         <CreateTicketForm onSave={handleAddTicket} onCancel={() => setIsCreateModalOpen(false)} />
       </TicketModal>
-      
-      {/* --- The Modal for Editing Tickets --- */}
+    
       <TicketModal isOpen={isEditModalOpen} onClose={handleCloseEditModal}>
-        {/* We only render the form if there's a ticket to edit */}
+
         {currentlyEditingTicket && (
           <EditTicketForm 
             ticket={currentlyEditingTicket} 
@@ -85,6 +84,7 @@ const TicketManagementPage = () => {
             onCancel={handleCloseEditModal} 
           />
         )}
+        
       </TicketModal>
     </div>
   );
