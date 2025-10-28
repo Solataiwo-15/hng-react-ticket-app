@@ -12,7 +12,8 @@ const ProtectedRoute = ({ children }) => {
           localStorage.removeItem('ticketapp_session');
           return <Navigate to="/auth/login" replace />;
       }
-  } catch {
+      // eslint-disable-next-line no-unused-vars
+  } catch (error) {
       localStorage.removeItem('ticketapp_session');
       return <Navigate to="/auth/login" replace />;
   }
